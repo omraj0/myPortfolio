@@ -328,6 +328,30 @@
 
         <div class="projects">
 
+          <article class="card spot project reveal" style="grid-column: 1 / -1">
+            <header class="project__head">
+              <div>
+                <h3 class="project__name">SealGrade</h3>
+                <p class="project__sub">Tamper-resistant code grading, an exploit corpus and an auditor</p>
+              </div>
+              <span class="chip">Oct 2026</span>
+            </header>
+
+            <div class="flow" aria-label="Pipeline: agent, artifact firewall, execution, judge, signed verdict">
+              <span>agent</span><i></i><span>artifact firewall</span><i></i><span>execution</span><i></i><span>judge</span><i></i><span>signed verdict</span>
+            </div>
+
+            <ul class="bullets">
+              <li>Built an open-source grading runner in <b>Python</b> and <b>Docker</b>: three isolated containers (non-root, <b>no network</b>, read-only filesystem, dropped capabilities), a single-file <b>artifact firewall</b>, a type-strict judge that never runs candidate code, and <b>HMAC-signed</b> verdicts.</li>
+              <li>Wrote a corpus of <b>30 attacks</b> against grading harnesses and measured it: a naive harness fell to <b>21 of 21</b> exploits, the strict tier to <b>0</b>. Every claim is asserted in <b>CI</b> (226 unit tests, <b>Hypothesis</b> fuzzing, <b>Docker</b> integration tests).</li>
+              <li>Shipped a static and <b>mutation-testing</b> auditor with <b>26 rules</b>, <b>SARIF</b> output for GitHub code scanning, a reusable GitHub Action, a <b>MkDocs</b> site and a tagged release.</li>
+            </ul>
+
+            <div class="tags"><span>Python</span><span>Docker</span><span>Pydantic</span><span>Hypothesis</span><span>GitHub Actions</span><span>MkDocs</span></div>
+            <a class="link-arrow" href="https://github.com/omraj0/sealgrade" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">-&gt;</span></a>
+            <a class="link-arrow" href="https://omraj0.github.io/sealgrade/" target="_blank" rel="noopener">Read the docs <span aria-hidden="true">-&gt;</span></a>
+          </article>
+
           <article class="card spot project reveal">
             <header class="project__head">
               <div>
